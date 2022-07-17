@@ -17,7 +17,7 @@ export class CoursesService {
     return this.httpClient.get<Course[]>(this.API)
     .pipe(
       first(), //como o servidor não é de straming, estamos mais interessados na primeira informação que o servidor enviar, depois encerra a conexão
-      delay(5000),
+    //  delay(5000),
       tap( courses => console.log(courses))
     );
   }
